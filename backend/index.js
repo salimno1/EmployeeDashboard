@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
+const employeeRoute = require("./routes/usersRoute");
 
 mongoose.set("strictQuery", false);
 dotenv.config();
@@ -13,6 +14,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/auth", authRoute);
+app.use("/api/employee", employeeRoute);
 app.listen("4000", () => {
   console.log("backend is runnings");
 });
