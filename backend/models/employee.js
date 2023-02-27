@@ -7,7 +7,7 @@ const EmployeeSchema = new mongoose.Schema({
     unique: true,
   },
   dateOfBirth: {
-    type: Date,
+    type: String,
     required: true,
   },
   salary: {
@@ -21,4 +21,4 @@ const EmployeeSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("User", EmployeeSchema);
+module.exports = mongoose.model("Employee", EmployeeSchema);
