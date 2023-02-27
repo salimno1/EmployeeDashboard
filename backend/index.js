@@ -14,5 +14,5 @@ mongoose
 
 app.use("/api/auth", authRoute);
 app.listen("4000", () => {
-  console.log("backend is running");
+  console.log("backend is runnings");
 });
