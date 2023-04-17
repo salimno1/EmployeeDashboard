@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/users");
 const bcrypt = require("bcrypt");
-
+//register
 router.post("/admin", async (req, res) => {
   try {
     const salt = await bcrypt.genSalt(10);
@@ -17,7 +17,7 @@ router.post("/admin", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//login
 router.post("/login", async (req, res) => {
   try {
     const admin = await User.findOne({ username: req.body.username });
