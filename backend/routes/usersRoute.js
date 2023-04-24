@@ -41,16 +41,8 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
-    if (employee.name === req.body.name) {
-      try {
-        await employee.delete();
-        res.status(200).json("employee has been deleted...");
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(401).json("You can delete only your post!");
-    }
+    await employee.delete();
+    res.status(200).json("employee has been deleted...");
   } catch (err) {
     res.status(500).json(err);
   }

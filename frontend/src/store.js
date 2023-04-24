@@ -1,14 +1,28 @@
-import { legacy_createStore, applyMiddleware, combineReducers } from "redux";
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import getEmployees from "./sagas/dataSaga";
 import addEmployeSaga from "./sagas/createSaga";
 import getEmployeeReducer from "./reducers/dataReducer";
 import { createReducer } from "./reducers/createReducer";
+import selectedEmployeeReducer from "./reducers/selectedEmployeeReducer";
+import watchDeleteEmployee from "./sagas/deleteSaga";
+const initialState = {
+  selectedEmployee: null,
+};
 
 const sagaMiddleware = createSagaMiddleware();
-const rootReducer = combineReducers({ getEmployeeReducer, createReducer });
-const store = legacy_createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const rootReducer = combineReducers({
+  getEmployeeReducer,
+  createReducer,
+  selectedEmployee: selectedEmployeeReducer,
+});
+const store = legacy_createStore(
+  rootReducer,
+  initialState,
+  applyMiddleware(sagaMiddleware)
+);
 sagaMiddleware.run(getEmployees);
 sagaMiddleware.run(addEmployeSaga);
+sagaMiddleware.run(watchDeleteEmployee);
 
 export default store;
