@@ -12,7 +12,12 @@ const EmployeeDetails = () => {
   };
 
   if (!selectedEmployee) {
-    return <div>Please select an employee</div>;
+    return (
+      <Container>
+        {" "}
+        <div>Please select an employee</div>
+      </Container>
+    );
   }
 
   return (

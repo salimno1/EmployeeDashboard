@@ -4,6 +4,9 @@ export const TableWrapper = styled.div`
   overflow-x: auto;
   margin-top: 20px;
   height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 10px;
 `;
 
 export const Table = styled.table`

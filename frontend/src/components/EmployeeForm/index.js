@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addEmployeeRequest } from "../../actions/createActions";
+import { FormWrapper } from "./style";
 
 const EmployeeForm = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const EmployeeForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormWrapper onSubmit={handleSubmit}>
       <label>
         Name:
         <input
@@ -56,7 +57,7 @@ const EmployeeForm = () => {
         </select>
       </label>
       <button type="submit">Add Employee</button>
-    </form>
+    </FormWrapper>
   );
 };
 
