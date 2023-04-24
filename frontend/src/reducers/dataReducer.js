@@ -1,6 +1,6 @@
 import { GET_USERS_SUCCESS } from "../actions/dataActions";
 
-const myFirstReducer = (state = { users: [] }, action) => {
+const getEmployeeReducer = (state = { users: [] }, action) => {
   switch (action.type) {
     case GET_USERS_SUCCESS:
       return { ...state, users: action.users };
@@ -9,4 +9,4 @@ const myFirstReducer = (state = { users: [] }, action) => {
   }
 };
 
-export default myFirstReducer;
+export default getEmployeeReducer;

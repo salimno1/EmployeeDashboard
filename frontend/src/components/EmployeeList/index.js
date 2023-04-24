@@ -5,11 +5,11 @@ import { getUsersFetch } from "../../actions/dataActions";
 
 export const EmployeeList = () => {
   const dispatch = useDispatch();
-  const users = useSelector((state) => state.myFirstReducer.users);
+  const users = useSelector((state) => state.getEmployeeReducer.users);
 
   useEffect(() => {
     dispatch(getUsersFetch());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <ListWrapper>
