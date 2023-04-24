@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Container } from "./style";
+import { Container, LeftContainer } from "./style";
 
 const EmployeeDetails = () => {
   const selectedEmployee = useSelector((state) => state.selectedEmployee);
@@ -14,20 +14,26 @@ const EmployeeDetails = () => {
   if (!selectedEmployee) {
     return (
       <Container>
-        {" "}
-        <div>Please select an employee</div>
+        <LeftContainer>
+          {" "}
+          <div>Please select an employee</div>
+        </LeftContainer>
       </Container>
     );
   }
 
   return (
-    <Container>
-      <h2>{selectedEmployee.name}</h2>
-      <p>Gender: {selectedEmployee.gender}</p>
-      <p>Date of Birth: {selectedEmployee.dateOfBirth}</p>
-      <p>Salary: {selectedEmployee.salary}</p>
-      <button onClick={handleDelete}>Delete Employee</button>
-    </Container>
+    <>
+      <Container>
+        <LeftContainer>
+          <h3>{selectedEmployee.name}</h3>
+          <p>Gender: {selectedEmployee.gender}</p>
+          <p>Date of Birth: {selectedEmployee.dateOfBirth}</p>
+          <p>Salary: {selectedEmployee.salary}</p>
+          <button onClick={handleDelete}>Delete Employee</button>
+        </LeftContainer>
+      </Container>
+    </>
   );
 };
 
