@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Container } from "./style";
 
 const EmployeeDetails = () => {
   const selectedEmployee = useSelector((state) => state.selectedEmployee);
@@ -7,6 +8,7 @@ const EmployeeDetails = () => {
 
   const handleDelete = () => {
     dispatch({ type: "DELETE_EMPLOYEE", payload: selectedEmployee._id });
+    window.location.reload();
   };
 
   if (!selectedEmployee) {
@@ -14,13 +16,13 @@ const EmployeeDetails = () => {
   }
 
   return (
-    <div>
+    <Container>
       <h2>{selectedEmployee.name}</h2>
       <p>Gender: {selectedEmployee.gender}</p>
       <p>Date of Birth: {selectedEmployee.dateOfBirth}</p>
       <p>Salary: {selectedEmployee.salary}</p>
       <button onClick={handleDelete}>Delete Employee</button>
-    </div>
+    </Container>
   );
 };
 
