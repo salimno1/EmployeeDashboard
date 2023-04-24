@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { ListWrapper, NameContainer } from "./style";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsersFetch } from "../../actions/dataActions";
 
 export const EmployeeList = () => {
-  const [employees, setEmployees] = useState([]);
+  const dispatch = useDispatch();
+  const users = useSelector((state) => state.myFirstReducer.users);
 
   useEffect(() => {
-    const fetchEmployees = async () => {
-      const res = await axios.get("http://localhost:4000/api/employee");
-      setEmployees(res.data);
-    };
-    fetchEmployees();
+    dispatch(getUsersFetch());
   }, []);
-  console.log(employees);
   return (
     <>
       <ListWrapper>
         <NameContainer>
-          {employees.map((employee) => (
+          {users.map((employee) => (
             <div key={employee._id}>{employee.name}</div>
           ))}
         </NameContainer>
