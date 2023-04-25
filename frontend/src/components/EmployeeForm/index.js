@@ -18,7 +18,6 @@ const EmployeeForm = () => {
     setSalary("");
     setGender("");
     console.log("Submitted form data: ", { name, dateOfBirth, salary, gender });
-    window.location.reload();
   };
 
   return (

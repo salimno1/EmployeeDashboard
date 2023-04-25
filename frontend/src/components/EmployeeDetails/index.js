@@ -66,7 +66,6 @@ const EmployeeDetails = () => {
 
   const handleDelete = () => {
     dispatch({ type: "DELETE_EMPLOYEE", payload: selectedEmployee._id });
-    window.location.reload();
   };
 
   if (!selectedEmployee) {
