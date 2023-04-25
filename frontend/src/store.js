@@ -6,6 +6,7 @@ import getEmployeeReducer from "./reducers/dataReducer";
 import { createReducer } from "./reducers/createReducer";
 import selectedEmployeeReducer from "./reducers/selectedEmployeeReducer";
 import watchDeleteEmployee from "./sagas/deleteSaga";
+import { watchUpdateEmployee } from "./sagas/updateSaga";
 const initialState = {
   selectedEmployee: null,
 };
@@ -24,5 +25,6 @@ const store = legacy_createStore(
 sagaMiddleware.run(getEmployees);
 sagaMiddleware.run(addEmployeSaga);
 sagaMiddleware.run(watchDeleteEmployee);
+sagaMiddleware.run(watchUpdateEmployee);
 
 export default store;

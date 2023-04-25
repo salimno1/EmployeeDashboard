@@ -15,22 +15,17 @@ router.post("/", async (req, res) => {
 //UPDATE
 router.put("/:id", async (req, res) => {
   try {
-    const employee = await Employee.findById(req.params.id);
-    if (employee.name === req.body.name) {
-      try {
-        const updatedEmployee = await Employee.findByIdAndUpdate(
-          req.params.id,
-          {
-            $set: req.body,
-          },
-          { new: true }
-        );
-        res.status(200).json(updatedEmployee);
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(401).json("You can update only your employee");
+    try {
+      const updatedEmployee = await Employee.findByIdAndUpdate(
+        req.params.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
+      res.status(200).json(updatedEmployee);
+    } catch (err) {
+      res.status(500).json(err);
     }
   } catch (err) {
     res.status(500).json(err);
