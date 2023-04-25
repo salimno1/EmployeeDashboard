@@ -18,7 +18,7 @@ export const EmployeeList = () => {
 
   useEffect(() => {
     dispatch(getUsersFetch());
-  }, [dispatch]);
+  }, [dispatch, users]);
 
   const handleEmployeeClick = (employee) => {
     dispatch(setSelectedEmployee(employee));

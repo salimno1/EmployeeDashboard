@@ -22,7 +22,33 @@ const EmployeeDetails = () => {
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    dispatch(updateEmployee({ ...selectedEmployee, ...employeeData }));
+    const updatedEmployeeData = {};
+
+    if (employeeData.name !== "") {
+      updatedEmployeeData.name = employeeData.name;
+    } else {
+      updatedEmployeeData.name = selectedEmployee.name;
+    }
+
+    if (employeeData.gender !== "") {
+      updatedEmployeeData.gender = employeeData.gender;
+    } else {
+      updatedEmployeeData.gender = selectedEmployee.gender;
+    }
+
+    if (employeeData.dateOfBirth !== "") {
+      updatedEmployeeData.dateOfBirth = employeeData.dateOfBirth;
+    } else {
+      updatedEmployeeData.dateOfBirth = selectedEmployee.dateOfBirth;
+    }
+
+    if (employeeData.salary !== "") {
+      updatedEmployeeData.salary = employeeData.salary;
+    } else {
+      updatedEmployeeData.salary = selectedEmployee.salary;
+    }
+
+    dispatch(updateEmployee({ ...selectedEmployee, ...updatedEmployeeData }));
     setEmployeeData({
       name: "",
       gender: "",
