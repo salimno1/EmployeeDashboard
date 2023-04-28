@@ -17,6 +17,10 @@ export const FormWrapper = styled.form`
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    &:focus {
+      outline: none;
+      border-color: #ccc;
+    }
   }
   button[type="submit"] {
     padding: 5px 10px;
@@ -27,3 +31,4 @@ export const FormWrapper = styled.form`
     cursor: pointer;
   }
 `;
+

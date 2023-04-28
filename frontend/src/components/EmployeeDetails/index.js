@@ -5,6 +5,8 @@ import {
   LeftContainer,
   InputContainer,
   ButtonContainer,
+  ImgHolder,
+  UpperContainer,
 } from "./style";
 import femaledummy from "../../img/femaledummy.png";
 import maledummy from "../../img/maledummy.png";
@@ -71,9 +73,7 @@ const EmployeeDetails = () => {
   if (!selectedEmployee) {
     return (
       <Container>
-        <LeftContainer style={{ display: "flex", justifyContent: "center" }}>
-          <div>Please select an employee</div>
-        </LeftContainer>
+        <div>Please select an employee</div>
       </Container>
     );
   }
@@ -81,8 +81,8 @@ const EmployeeDetails = () => {
   return (
     <>
       <Container>
-        <form onSubmit={handleUpdate}>
-          <LeftContainer>
+        <UpperContainer>
+          <ImgHolder>
             <img
               src={
                 selectedEmployee.gender === "female" ? femaledummy : maledummy
@@ -94,6 +94,8 @@ const EmployeeDetails = () => {
               }
             />
             <h4>{selectedEmployee.name}</h4>
+          </ImgHolder>
+          <form onSubmit={handleUpdate}>
             <InputContainer>
               <label>
                 <p>Name:</p>
@@ -132,14 +134,27 @@ const EmployeeDetails = () => {
                 />
               </label>
             </InputContainer>
-            <ButtonContainer>
-              <button type="submit">Update Employee</button>
-              <button type="button" onClick={handleDelete}>
-                Delete Employee
-              </button>
-            </ButtonContainer>
-          </LeftContainer>
-        </form>
+          </form>
+        </UpperContainer>
+        <ButtonContainer>
+          <button
+            type="submit"
+            onClick={handleUpdate}
+            style={{
+              padding: "5px 10px",
+              borderRadius: "5px",
+              border: "none",
+              backgroundColor: "rgb(0, 119, 182",
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            Update Employee
+          </button>
+          <button type="button" onClick={handleDelete}>
+            Delete Employee
+          </button>
+        </ButtonContainer>
       </Container>
     </>
   );
