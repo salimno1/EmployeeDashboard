@@ -1,5 +1,3 @@
-Sure, here's an updated README file for your MERN stack project without Heroku and Docker:
-
 # EMPLOYEE DASHBOARD - MERN Stack
 
 This is a full stack application built with the MERN (MongoDB, Express JS, React JS & Node JS) stack. It consists of a Rest API backend that allows you to manage employees, and a frontend web application that consumes this API.
