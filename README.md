@@ -29,7 +29,7 @@ npm install
 nodemon index.js
 ```
 
-The server will be running on `http://localhost:5000`. You can use a tool like Postman to test the API endpoints.
+The server will be running on `http://localhost:4000`. You can use a tool like Postman to test the API endpoints.
 
 ## Frontend
 
