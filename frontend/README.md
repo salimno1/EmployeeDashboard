@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+Sure, here's an updated README file for your MERN stack project without Heroku and Docker:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EMPLOYEE DASHBOARD - MERN Stack
 
-## Available Scripts
+This is a full stack application built with the MERN (MongoDB, Express JS, React JS & Node JS) stack. It consists of a Rest API backend that allows you to manage employees, and a frontend web application that consumes this API.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- Express JS: Used to handle requests on the server-side.
+- MongoDB: Used to store employee data.
+- Mongoose: Used to interact with MongoDB, model data, and create schemas.
+- React JS: Used to create the user interface for the frontend.
+- Redux: Used for state management.
+- Redux-Saga: Used to make calls to the Rest API.
+- Styled Components: Used to style the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The backend of this application is a Rest API that lets you manage employees. There is only one model for handling employee data, with the following fields:
 
-### `npm test`
+- Name
+- Date of birth
+- Gender
+- Salary
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the backend, you will need to have MongoDB installed on your machine. Once you have MongoDB set up, you can start the server by running the following commands:
 
-### `npm run build`
+```
+cd backend
+npm install
+nodemon index.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The server will be running on `http://localhost:5000`. You can use a tool like Postman to test the API endpoints.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend of this application is a web application that allows you to create, list, update, and delete employee entries. To run the frontend, you can run the following commands:
 
-### `npm run eject`
+```
+cd frontend
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The frontend will be running on `http://localhost:3000`. You can interact with the application through the user interface.
