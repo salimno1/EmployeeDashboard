@@ -1,4 +1,4 @@
-import { takeEvery, call, put, takeLatest } from "redux-saga/effects";
+import { takeEvery, call, put } from "redux-saga/effects";
 import {
   ADD_EMPLOYEE_REQUEST,
   ADD_EMPLOYEE_SUCCESS,

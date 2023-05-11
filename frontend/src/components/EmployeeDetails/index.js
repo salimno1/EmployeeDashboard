@@ -2,7 +2,6 @@ import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Container,
-  LeftContainer,
   InputContainer,
   ButtonContainer,
   ImgHolder,
@@ -83,7 +82,7 @@ const EmployeeDetails = () => {
     });
   };
 
-  if (!selectedEmployee || !employeeData.name || !employeeData.gender || !employeeData.dateOfBirth || !employeeData.salary) {
+  if (!selectedEmployee) {
     return (
       <Container>
         <div>Please select an employee</div>
@@ -91,7 +90,6 @@ const EmployeeDetails = () => {
     );
   }
   
-console.log(employeeData)
   return (
     <>
       <Container>

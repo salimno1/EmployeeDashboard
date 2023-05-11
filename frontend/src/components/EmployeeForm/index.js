@@ -4,7 +4,7 @@ import { addEmployeeRequest } from "../../actions/createActions";
 import { FormWrapper } from "./style";
 
 const EmployeeForm = () => {
-  const { employees, isLoading, error } = useSelector(state => state.createReducer);
+  const { error } = useSelector(state => state.createReducer);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
