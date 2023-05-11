@@ -22,8 +22,11 @@ export const InputContainer = styled.div`
 
   input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
   }
+  input:focus {
+  outline: none;
+}
   label {
   }
 `;
