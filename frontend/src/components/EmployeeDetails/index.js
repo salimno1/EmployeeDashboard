@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Container,
@@ -15,12 +15,24 @@ import { updateEmployee } from "../../actions/updateActions";
 const EmployeeDetails = () => {
   const selectedEmployee = useSelector((state) => state.selectedEmployee);
   const dispatch = useDispatch();
+  
   const [employeeData, setEmployeeData] = useState({
-    name: "",
+    name:  "",
     gender: "",
-    dateOfBirth: "",
-    salary: "",
+    dateOfBirth:  "",
+    salary: "s",
   });
+  
+  useEffect(() => {
+    if (selectedEmployee) {
+      setEmployeeData({
+        name: selectedEmployee.name,
+        gender: selectedEmployee.gender,
+        dateOfBirth: selectedEmployee.dateOfBirth,
+        salary: selectedEmployee.salary,
+      });
+    }
+  }, [selectedEmployee]);
 
   const handleUpdate = (event) => {
     event.preventDefault();
@@ -51,12 +63,7 @@ const EmployeeDetails = () => {
     }
 
     dispatch(updateEmployee({ ...selectedEmployee, ...updatedEmployeeData }));
-    setEmployeeData({
-      name: "",
-      gender: "",
-      dateOfBirth: "",
-      salary: "",
-    });
+   
   };
 
   const handleInputChange = (event) => {
@@ -77,7 +84,7 @@ const EmployeeDetails = () => {
       </Container>
     );
   }
-
+console.log(employeeData)
   return (
     <>
       <Container>

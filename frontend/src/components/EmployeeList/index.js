@@ -22,7 +22,7 @@ export const EmployeeList = () => {
 
   const handleEmployeeClick = (employee) => {
     dispatch(setSelectedEmployee(employee));
-    console.log(employee);
+
   };
 
   return (

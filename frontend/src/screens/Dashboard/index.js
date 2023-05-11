@@ -3,7 +3,6 @@ import EmployeeDetails from "../../components/EmployeeDetails";
 import EmployeeForm from "../../components/EmployeeForm";
 import EmployeeList from "../../components/EmployeeList";
 import { DashboardWrapper, LowerContiner, UpperContainer } from "./style";
-
 const Dashboard = () => {
   return (
     <DashboardWrapper>
@@ -17,5 +16,6 @@ const Dashboard = () => {
     </DashboardWrapper>
   );
 };
+
 
 export default Dashboard;
