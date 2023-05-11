@@ -58,7 +58,7 @@ const EmployeeForm = () => {
         </select>
       </label>
       <button type="submit">Add Employee</button>
-      {error && <p style={{ color: "red" }}>Make sure the fields is correctly filled</p>}
+      {error && <p style={{ color: "red" , margin: '2px'}}>Make sure the fields are correctly filled</p>}
     </FormWrapper>
     
   );
