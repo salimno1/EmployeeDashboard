@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Container,
@@ -14,14 +14,14 @@ import { updateEmployee } from "../../actions/updateActions";
 const EmployeeDetails = () => {
   const selectedEmployee = useSelector((state) => state.selectedEmployee);
   const dispatch = useDispatch();
-  
+
   const [employeeData, setEmployeeData] = useState({
-    name:  "",
+    name: "",
     gender: "",
-    dateOfBirth:  "",
+    dateOfBirth: "",
     salary: "s",
   });
-  
+
   useEffect(() => {
     if (selectedEmployee) {
       setEmployeeData({
@@ -62,7 +62,6 @@ const EmployeeDetails = () => {
     }
 
     dispatch(updateEmployee({ ...selectedEmployee, ...updatedEmployeeData }));
-   
   };
 
   const handleInputChange = (event) => {
@@ -80,17 +79,17 @@ const EmployeeDetails = () => {
       dateOfBirth: "",
       salary: "",
     });
-    selectedEmployee.name = ""
+    selectedEmployee.name = "";
   };
 
-  if (!selectedEmployee ) {
+  if (!selectedEmployee) {
     return (
       <Container>
         <div>Please select an employee</div>
       </Container>
     );
   }
-  
+
   return (
     <>
       <Container>
@@ -140,7 +139,7 @@ const EmployeeDetails = () => {
               <label>
                 <p>Salary:</p>
                 <input
-                  type="text"
+                  type="number"
                   name="salary"
                   value={employeeData.salary}
                   onChange={handleInputChange}
