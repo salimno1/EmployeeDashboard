@@ -13,6 +13,10 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   background-color: #f5f5f5;
+  position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 `;
 
 export const TableRow = styled.tr`

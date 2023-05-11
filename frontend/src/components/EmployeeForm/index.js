@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addEmployeeRequest } from "../../actions/createActions";
 import { FormWrapper } from "./style";
 
 const EmployeeForm = () => {
+  const { employees, isLoading, error } = useSelector(state => state.createReducer);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
@@ -11,6 +12,7 @@ const EmployeeForm = () => {
   const [gender, setGender] = useState("");
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
     dispatch(addEmployeeRequest({ name, dateOfBirth, salary, gender }));
     setName("");
@@ -56,7 +58,9 @@ const EmployeeForm = () => {
         </select>
       </label>
       <button type="submit">Add Employee</button>
+      {error && <p style={{ color: "red" }}>Make sure the fields is correctly filled</p>}
     </FormWrapper>
+    
   );
 };
 

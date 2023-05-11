@@ -75,15 +75,22 @@ const EmployeeDetails = () => {
 
   const handleDelete = () => {
     dispatch({ type: "DELETE_EMPLOYEE", payload: selectedEmployee._id });
+    setEmployeeData({
+      name: "",
+      gender: "",
+      dateOfBirth: "",
+      salary: "",
+    });
   };
 
-  if (!selectedEmployee) {
+  if (!selectedEmployee || !employeeData.name || !employeeData.gender || !employeeData.dateOfBirth || !employeeData.salary) {
     return (
       <Container>
         <div>Please select an employee</div>
       </Container>
     );
   }
+  
 console.log(employeeData)
   return (
     <>
