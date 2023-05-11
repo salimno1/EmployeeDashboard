@@ -80,9 +80,10 @@ const EmployeeDetails = () => {
       dateOfBirth: "",
       salary: "",
     });
+    selectedEmployee.name = ""
   };
 
-  if (!selectedEmployee) {
+  if (!selectedEmployee ) {
     return (
       <Container>
         <div>Please select an employee</div>
