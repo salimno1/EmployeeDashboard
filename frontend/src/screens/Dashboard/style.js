@@ -16,5 +16,5 @@ export const UpperContainer = styled.div`
   justify-content: space-between;
 `;
 export const LowerContainer = styled.div`
-  padding: 25px;
+  padding: 25px 0;
 `;

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Container,
+  InfoDiv,
+  Info,
   InputContainer,
   ButtonContainer,
+  RightContainer,
+  InfoHolder,
   ImgHolder,
-  UpperContainer,
+  LeftContainer,
 } from "./style";
 import femaledummy from "../../img/femaledummy.png";
 import maledummy from "../../img/maledummy.png";
@@ -93,7 +97,7 @@ const EmployeeDetails = () => {
   return (
     <>
       <Container>
-        <UpperContainer>
+        <LeftContainer>
           <ImgHolder>
             <img
               src={
@@ -105,28 +109,92 @@ const EmployeeDetails = () => {
                   : "Male Employee"
               }
             />
-            <h4>{selectedEmployee.name}</h4>
           </ImgHolder>
-        </UpperContainer>
-        <ButtonContainer>
-          <button
-            type="submit"
-            onClick={handleUpdate}
-            style={{
-              padding: "5px 10px",
-              borderRadius: "5px",
-              border: "none",
-              backgroundColor: "rgb(0, 119, 182",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            Update Employee
-          </button>
-          <button type="button" onClick={handleDelete}>
-            Delete Employee
-          </button>
-        </ButtonContainer>
+          <InfoHolder>
+            <InfoDiv>
+              <Info>
+                {" "}
+                <p>Full name</p>
+                <h2>{employeeData.name}</h2>
+              </Info>
+              <Info>
+                <p>Gender</p>
+                <h2>{employeeData.gender}</h2>
+              </Info>
+            </InfoDiv>
+            <InfoDiv>
+              <Info>
+                <p>Birth of date</p>
+                <h2>{employeeData.dateOfBirth}</h2>
+              </Info>
+              <Info>
+                <p>Salary</p>
+                <h2>{employeeData.salary} KR</h2>
+              </Info>
+            </InfoDiv>
+          </InfoHolder>
+        </LeftContainer>
+        <RightContainer>
+          <form onSubmit={handleUpdate}>
+            <InputContainer>
+              <label>
+                <p>Name:</p>
+                <input
+                  type="text"
+                  name="name"
+                  value={employeeData.name}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label>
+                <p>Gender:</p>
+                <input
+                  type="text"
+                  name="gender"
+                  value={employeeData.gender}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label>
+                <p>Date of Birth:</p>
+                <input
+                  type="text"
+                  name="dateOfBirth"
+                  value={employeeData.dateOfBirth}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label>
+                <p>Salary:</p>
+                <input
+                  type="number"
+                  name="salary"
+                  value={employeeData.salary}
+                  onChange={handleInputChange}
+                />
+              </label>
+            </InputContainer>
+          </form>
+          <ButtonContainer>
+            <button
+              type="submit"
+              onClick={handleUpdate}
+              style={{
+                padding: "5px 10px",
+                borderRadius: "5px",
+                border: "none",
+                backgroundColor: "rgb(0, 119, 182",
+                color: "white",
+                cursor: "pointer",
+              }}
+            >
+              Update Employee
+            </button>
+            <button type="button" onClick={handleDelete}>
+              Delete Employee
+            </button>
+          </ButtonContainer>
+        </RightContainer>
       </Container>
     </>
   );

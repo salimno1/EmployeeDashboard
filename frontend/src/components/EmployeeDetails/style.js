@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 60%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 
@@ -14,6 +13,7 @@ export const Container = styled.div`
 `;
 
 export const InputContainer = styled.div`
+  background-color: white;
   width: 100%;
   height: 100%;
   display: flex;
@@ -33,10 +33,15 @@ export const InputContainer = styled.div`
 `;
 
 export const ImgHolder = styled.div`
-  width: 40%;
+  width: 25%;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 5px;
   img {
     height: 150px;
     margin-left: -10px;
@@ -45,12 +50,12 @@ export const ImgHolder = styled.div`
     margin: 0;
   }
 `;
-export const UpperContainer = styled.div`
-  width: 80%;
+export const LeftContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  gap: 25px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
 `;
 export const ButtonContainer = styled.div`
   width: 40%;
@@ -58,4 +63,52 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   gap: 10px;
+`;
+
+export const InfoDiv = styled.div`
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+`;
+
+export const InfoHolder = styled.div`
+  width: 60%;
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+`;
+export const RightContainer = styled.div`
+  width: 65%;
+  background-color: white;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const Info = styled.div`
+  height: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 5px;
+  p {
+    margin-bottom: 25px;
+    color: rgb(0, 119, 182);
+  }
+  h2 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #242424;
+    text-transform: capitalize;
+  }
 `;
