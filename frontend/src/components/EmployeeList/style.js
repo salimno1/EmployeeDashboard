@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 55%;
+  width: 65%;
   background-color: white;
   padding: 25px;
   overflow-x: auto;
   height: 300px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  border-radius: 10px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
+  border-radius: 5px;
 `;
 
 export const Table = styled.table`
@@ -17,11 +17,11 @@ export const Table = styled.table`
 `;
 
 export const TableHead = styled.thead`
-  background-color: #f5f5f5;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: rgb(0, 119, 182);
   z-index: 1;
+  color: white;
 `;
 
 export const TableRow = styled.tr`

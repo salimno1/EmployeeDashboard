@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const FormWrapper = styled.form`
   display: flex;
   background-color: white;
-  width: 30%;
+  width: 20%;
   flex-direction: column;
   padding: 40px 65px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
   border-radius: 5px;
 
   label {
@@ -33,5 +33,8 @@ export const FormWrapper = styled.form`
     background-color: #0077b6;
     color: white;
     cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #005b8b;
   }
 `;

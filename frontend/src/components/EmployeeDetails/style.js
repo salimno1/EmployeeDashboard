@@ -39,8 +39,8 @@ export const ImgHolder = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
   border-radius: 5px;
   img {
     height: 150px;
@@ -51,7 +51,7 @@ export const ImgHolder = styled.div`
   }
 `;
 export const LeftContainer = styled.div`
-  width: 100%;
+  width: 140%;
   height: 100%;
   gap: 25px;
   display: flex;
@@ -73,21 +73,21 @@ export const InfoDiv = styled.div`
 `;
 
 export const InfoHolder = styled.div`
-  width: 60%;
+  width: 68%;
   height: 350px;
   display: flex;
   justify-content: space-around;
   gap: 25px;
 `;
 export const RightContainer = styled.div`
-  width: 65%;
+  width: 58%;
   background-color: white;
-  height: 300px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  border-radius: 10px;
+  height: 350px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
+  border-radius: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 `;
@@ -99,8 +99,8 @@ export const Info = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
   border-radius: 5px;
   p {
     margin-bottom: 25px;

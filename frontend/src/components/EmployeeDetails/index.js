@@ -187,6 +187,12 @@ const EmployeeDetails = () => {
                 color: "white",
                 cursor: "pointer",
               }}
+              onMouseEnter={(e) =>
+                (e.target.style.backgroundColor = "rgb(0, 91, 139)")
+              }
+              onMouseLeave={(e) =>
+                (e.target.style.backgroundColor = "rgb(0, 119, 182)")
+              }
             >
               Update Employee
             </button>
