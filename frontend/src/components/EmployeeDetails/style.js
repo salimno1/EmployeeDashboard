@@ -102,10 +102,7 @@ export const Info = styled.div`
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
     inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
   border-radius: 5px;
-  p {
-    margin-bottom: 25px;
-    color: rgb(0, 119, 182);
-  }
+
   h2 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #242424;

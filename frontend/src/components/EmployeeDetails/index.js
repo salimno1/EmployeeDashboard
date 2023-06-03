@@ -114,21 +114,53 @@ const EmployeeDetails = () => {
             <InfoDiv>
               <Info>
                 {" "}
-                <p>Full name</p>
+                <div
+                  style={{
+                    width: "100%",
+                    paddingLeft: "10px",
+                    color: "#0077B6",
+                  }}
+                >
+                  <p>Full name</p>
+                </div>
                 <h2>{employeeData.name}</h2>
               </Info>
               <Info>
-                <p>Gender</p>
+                <div
+                  style={{
+                    width: "100%",
+                    paddingLeft: "10px",
+                    color: "#0077B6",
+                  }}
+                >
+                  <p>Gender</p>
+                </div>
                 <h2>{employeeData.gender}</h2>
               </Info>
             </InfoDiv>
             <InfoDiv>
               <Info>
-                <p>Birth of date</p>
+                <div
+                  style={{
+                    width: "100%",
+                    paddingLeft: "10px",
+                    color: "#0077B6",
+                  }}
+                >
+                  <p>Date of birth</p>
+                </div>
                 <h2>{employeeData.dateOfBirth}</h2>
               </Info>
               <Info>
-                <p>Salary</p>
+                <div
+                  style={{
+                    width: "100%",
+                    paddingLeft: "10px",
+                    color: "#0077B6",
+                  }}
+                >
+                  <p>Salary</p>
+                </div>
                 <h2>{employeeData.salary} KR</h2>
               </Info>
             </InfoDiv>
