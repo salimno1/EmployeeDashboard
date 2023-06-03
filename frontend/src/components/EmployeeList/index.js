@@ -18,11 +18,10 @@ export const EmployeeList = () => {
 
   useEffect(() => {
     dispatch(getUsersFetch());
-  }, [dispatch, users]);
+  }, [dispatch]);
 
   const handleEmployeeClick = (employee) => {
     dispatch(setSelectedEmployee(employee));
-
   };
 
   return (

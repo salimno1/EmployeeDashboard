@@ -4,6 +4,7 @@ import {
   UPDATE_EMPLOYEE_SUCCESS,
   UPDATE_EMPLOYEE_FAILURE,
 } from "../actions/updateActions";
+import { GET_USERS_FETCH } from "../actions/dataActions";
 
 // API call for updating an employee
 const updateEmployeeApi = (employee) => {
@@ -21,6 +22,7 @@ function* updateEmployee(action) {
     const employee = action.payload;
     const updatedEmployee = yield call(updateEmployeeApi, employee);
     yield put({ type: UPDATE_EMPLOYEE_SUCCESS, payload: updatedEmployee });
+    yield put({ type: GET_USERS_FETCH });
   } catch (error) {
     yield put({ type: UPDATE_EMPLOYEE_FAILURE, payload: error.message });
   }

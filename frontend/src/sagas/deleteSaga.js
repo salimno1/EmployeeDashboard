@@ -1,4 +1,6 @@
 import { takeEvery, call, put } from "redux-saga/effects";
+import { GET_USERS_FETCH } from "../actions/dataActions";
+
 import axios from "axios";
 
 function* deleteEmployee(action) {
@@ -11,6 +13,7 @@ function* deleteEmployee(action) {
 
     // dispatch a success action
     yield put({ type: "DELETE_EMPLOYEE_SUCCESS" });
+    yield put({ type: GET_USERS_FETCH });
   } catch (error) {
     // dispatch an error action
     yield put({ type: "DELETE_EMPLOYEE_ERROR", payload: error.message });

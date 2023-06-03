@@ -4,6 +4,8 @@ import {
   ADD_EMPLOYEE_SUCCESS,
   ADD_EMPLOYEE_FAILURE,
 } from "../actions/createActions";
+import { GET_USERS_FETCH } from "../actions/dataActions";
+
 import axios from "axios";
 
 function createEmployee(employeeData) {
@@ -18,6 +20,7 @@ function* workAddEmployee(action) {
   try {
     const employee = yield call(createEmployee, action.payload);
     yield put({ type: ADD_EMPLOYEE_SUCCESS, payload: employee });
+    yield put({ type: GET_USERS_FETCH });
   } catch (error) {
     yield put({ type: ADD_EMPLOYEE_FAILURE, payload: error });
   }
