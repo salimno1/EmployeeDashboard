@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
-const employeeRoute = require("./routes/usersRoute");
+const employeeRoute = require("./routes/employeeRoute");
 
 mongoose.set("strictQuery", false);
 dotenv.config();

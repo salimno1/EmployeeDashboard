@@ -107,46 +107,6 @@ const EmployeeDetails = () => {
             />
             <h4>{selectedEmployee.name}</h4>
           </ImgHolder>
-          <form onSubmit={handleUpdate}>
-            <InputContainer>
-              <label>
-                <p>Name:</p>
-                <input
-                  type="text"
-                  name="name"
-                  value={employeeData.name}
-                  onChange={handleInputChange}
-                />
-              </label>
-              <label>
-                <p>Gender:</p>
-                <input
-                  type="text"
-                  name="gender"
-                  value={employeeData.gender}
-                  onChange={handleInputChange}
-                />
-              </label>
-              <label>
-                <p>Date of Birth:</p>
-                <input
-                  type="text"
-                  name="dateOfBirth"
-                  value={employeeData.dateOfBirth}
-                  onChange={handleInputChange}
-                />
-              </label>
-              <label>
-                <p>Salary:</p>
-                <input
-                  type="number"
-                  name="salary"
-                  value={employeeData.salary}
-                  onChange={handleInputChange}
-                />
-              </label>
-            </InputContainer>
-          </form>
         </UpperContainer>
         <ButtonContainer>
           <button

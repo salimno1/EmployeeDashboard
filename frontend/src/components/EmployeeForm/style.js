@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FormWrapper = styled.form`
   display: flex;
-  width: 100%;
+  width: 30%;
   flex-direction: column;
   padding: 40px 65px;
   border-left: 2px solid #f2f2f2;
@@ -31,4 +31,3 @@ export const FormWrapper = styled.form`
     cursor: pointer;
   }
 `;
-
