@@ -10,10 +10,19 @@ export const FormWrapper = styled.form`
     inset 0px 0px 0px 1px rgba(209, 213, 219, 1);
   border-radius: 5px;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 25px 0;
+    padding: 10px 0;
+  }
+
   label {
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    @media (max-width: 768px) {
+      margin-left: 5px;
+    }
   }
   input,
   select {
@@ -25,6 +34,9 @@ export const FormWrapper = styled.form`
       outline: none;
       border-color: #ccc;
     }
+    @media (max-width: 768px) {
+      margin: 10px;
+    }
   }
   button[type="submit"] {
     padding: 5px 10px;
@@ -33,6 +45,10 @@ export const FormWrapper = styled.form`
     background-color: #0077b6;
     color: white;
     cursor: pointer;
+    @media (max-width: 768px) {
+      width: 80%;
+      align-self: center;
+    }
   }
   button[type="submit"]:hover {
     background-color: #005b8b;

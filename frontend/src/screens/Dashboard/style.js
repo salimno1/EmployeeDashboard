@@ -8,6 +8,11 @@ export const DashboardWrapper = styled.div`
   padding: 0 100px;
 
   border-radius: 10px;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+    margin: 0;
+    flex-direction: column;
+  }
 `;
 
 export const UpperContainer = styled.div`
@@ -15,10 +20,13 @@ export const UpperContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
   }
 `;
 export const LowerContainer = styled.div`
   padding: 25px 0;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
