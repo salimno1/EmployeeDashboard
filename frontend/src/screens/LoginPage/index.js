@@ -18,21 +18,21 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { user, dispatch, isFetching } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
-    setErrorMessage(""); // Clear previous error message when username changes
+    setErrorMessage("");
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    setErrorMessage(""); // Clear previous error message when password changes
+    setErrorMessage("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage(""); // Clear previous error message
+    setErrorMessage("");
     setIsLoading(true);
 
     try {
