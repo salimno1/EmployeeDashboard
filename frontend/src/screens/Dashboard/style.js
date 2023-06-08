@@ -24,9 +24,14 @@ export const UpperContainer = styled.div`
     justify-content: space-between;
   }
 `;
+
+export const LogoutBtn = styled.button`
+  width: 100px;
+  margin-bottom: 10px;
+`;
 export const LowerContainer = styled.div`
   padding: 25px 0;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
   }
 `;

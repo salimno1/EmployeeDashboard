@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store";
+import { ContextProvider } from "./context/Context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <ContextProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ContextProvider>
   </React.StrictMode>
 );
