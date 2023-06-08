@@ -28,6 +28,11 @@ export const UpperContainer = styled.div`
 export const LogoutBtn = styled.button`
   width: 100px;
   margin-bottom: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 `;
 export const LowerContainer = styled.div`
   padding: 25px 0;

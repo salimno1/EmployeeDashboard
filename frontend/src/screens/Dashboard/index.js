@@ -11,7 +11,7 @@ import {
   UpperContainer,
 } from "./style";
 const Dashboard = () => {
-  const { user, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };

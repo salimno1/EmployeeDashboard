@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const ErrorMessage = styled.div`
+  color: red;
+  margin-top: 5px;
+`;
+export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -24,7 +36,7 @@ export const Input = styled.input`
 
 export const SubmitButton = styled.button`
   padding: 10px 20px;
-  background-color: #f44336;
+  background-color: rgb(0, 119, 182);
   color: #fff;
   border: none;
   border-radius: 4px;
